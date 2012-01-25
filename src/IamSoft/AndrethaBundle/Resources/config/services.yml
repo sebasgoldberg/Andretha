@@ -1,0 +1,25 @@
+parameters:
+#    iam_soft_andretha.example.class: IamSoft\AndrethaBundle\Example
+
+#  my.validator.unique.class: MyApp\MyBundle\Validator\UniqueValidator
+  iamsoft.validator.entity.manager.validator.class: IamSoft\AndrethaBundle\Validator\EntityManagerConstraintValidator
+  
+services:
+#    iam_soft_andretha.example:
+#        class: %iam_soft_andretha.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+#  my.validator.unique:
+#    class:      %my.validator.unique.class%
+#    arguments: [@doctrine.orm.entity_manager]
+#    tags:
+#      - { name: validator.constraint_validator, alias: validator.unique }
+# Verificar si es necesario el unique
+  validator.unique.entity.manager.validator:
+    class:      %iamsoft.validator.entity.manager.validator.class%
+    arguments: [@doctrine.orm.entity_manager]
+    tags:
+      - { name: validator.constraint_validator, alias: iamsoft.entity.manager.validator }
+
+
+

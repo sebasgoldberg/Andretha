@@ -1,0 +1,30 @@
+loteanexos:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteAnexos:index" }
+
+loteanexos_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteAnexos:show" }
+
+loteanexos_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteAnexos:new" }
+
+loteanexos_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteAnexos:create" }
+    requirements: { _method: post }
+
+loteanexos_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteAnexos:edit" }
+
+loteanexos_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteAnexos:update" }
+    requirements: { _method: post }
+
+loteanexos_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteAnexos:delete" }
+    requirements: { _method: post }

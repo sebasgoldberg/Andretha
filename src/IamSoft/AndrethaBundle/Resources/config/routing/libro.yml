@@ -1,0 +1,30 @@
+libro:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:Libro:index" }
+
+libro_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:Libro:show" }
+
+libro_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:Libro:new" }
+
+libro_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:Libro:create" }
+    requirements: { _method: post }
+
+libro_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:Libro:edit" }
+
+libro_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:Libro:update" }
+    requirements: { _method: post }
+
+libro_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:Libro:delete" }
+    requirements: { _method: post }

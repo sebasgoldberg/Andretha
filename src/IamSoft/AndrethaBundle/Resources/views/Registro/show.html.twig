@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+
+{%block content%}
+<h1>Registro</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Denominacion</th>
+            <td>{{ entity.denominacion }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('registro') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('registro_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('registro_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+{%endblock%}

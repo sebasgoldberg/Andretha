@@ -18,6 +18,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Acme\DemoBundle\AcmeDemoBundle(),
+            new Acme\TestBundle\AcmeTestBundle(),
+            new Acme\StoreBundle\AcmeStoreBundle(),
             new IamSoft\AndrethaBundle\IamSoftAndrethaBundle(),
         );
 

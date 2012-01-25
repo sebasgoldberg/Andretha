@@ -1,0 +1,28 @@
+{% extends '::base.html.twig' %}
+
+{%block content%}
+
+<h1>Carpeta creation</h1>
+
+<form action="{{ path('carpeta_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('carpeta') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+
+{%endblock%}
+
+{% block javascripts %}
+  {{ parent() }}
+  <script src="{{ asset('js/jquery-1.7.1.min.js') }}"></script>
+  <script src="{{ asset('bundles/iamsoftandretha/js/carpeta/new.js') }}"></script>
+{% endblock %}

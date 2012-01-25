@@ -1,0 +1,30 @@
+registro:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:Registro:index" }
+
+registro_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:Registro:show" }
+
+registro_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:Registro:new" }
+
+registro_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:Registro:create" }
+    requirements: { _method: post }
+
+registro_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:Registro:edit" }
+
+registro_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:Registro:update" }
+    requirements: { _method: post }
+
+registro_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:Registro:delete" }
+    requirements: { _method: post }

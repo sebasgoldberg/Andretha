@@ -1,0 +1,30 @@
+registro_escribano:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:RegistroEscribano:index" }
+
+registro_escribano_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:RegistroEscribano:show" }
+
+registro_escribano_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:RegistroEscribano:new" }
+
+registro_escribano_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:RegistroEscribano:create" }
+    requirements: { _method: post }
+
+registro_escribano_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:RegistroEscribano:edit" }
+
+registro_escribano_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:RegistroEscribano:update" }
+    requirements: { _method: post }
+
+registro_escribano_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:RegistroEscribano:delete" }
+    requirements: { _method: post }

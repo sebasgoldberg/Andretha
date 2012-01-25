@@ -1,0 +1,30 @@
+tipotramite:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoTramite:index" }
+
+tipotramite_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoTramite:show" }
+
+tipotramite_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoTramite:new" }
+
+tipotramite_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoTramite:create" }
+    requirements: { _method: post }
+
+tipotramite_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoTramite:edit" }
+
+tipotramite_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoTramite:update" }
+    requirements: { _method: post }
+
+tipotramite_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoTramite:delete" }
+    requirements: { _method: post }

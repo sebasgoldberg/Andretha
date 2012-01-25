@@ -1,0 +1,30 @@
+tipocarpeta:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoCarpeta:index" }
+
+tipocarpeta_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoCarpeta:show" }
+
+tipocarpeta_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoCarpeta:new" }
+
+tipocarpeta_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoCarpeta:create" }
+    requirements: { _method: post }
+
+tipocarpeta_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoCarpeta:edit" }
+
+tipocarpeta_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoCarpeta:update" }
+    requirements: { _method: post }
+
+tipocarpeta_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoCarpeta:delete" }
+    requirements: { _method: post }

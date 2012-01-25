@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+
+{%block content%}
+
+<h1>LoteActas</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Numpreimpresoini</th>
+            <td>{{ entity.numPreImpresoIni }}</td>
+        </tr>
+        <tr>
+            <th>Cantidad</th>
+            <td>{{ entity.cantidad }}</td>
+        </tr>
+        <tr>
+            <th>Fechacompra</th>
+            <td>{{ entity.fechaCompra|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Cantidadusados</th>
+            <td>{{ entity.cantidadUsados }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('loteactas') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('loteactas_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('loteactas_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+
+{%endblock%}

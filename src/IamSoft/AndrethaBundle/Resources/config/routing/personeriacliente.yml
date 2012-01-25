@@ -1,0 +1,30 @@
+personeriacliente:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:PersoneriaCliente:index" }
+
+personeriacliente_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:PersoneriaCliente:show" }
+
+personeriacliente_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:PersoneriaCliente:new" }
+
+personeriacliente_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:PersoneriaCliente:create" }
+    requirements: { _method: post }
+
+personeriacliente_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:PersoneriaCliente:edit" }
+
+personeriacliente_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:PersoneriaCliente:update" }
+    requirements: { _method: post }
+
+personeriacliente_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:PersoneriaCliente:delete" }
+    requirements: { _method: post }

@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{%block content%}
+<h1>RegistroEscribano list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Registro</th>
+            <th>Escribano</th>
+            <th>Caracter</th>
+            <th>Fechavalidodesde</th>
+            <th>Fechavalidohasta</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('registro_escribano_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td><a href="{{ path('registro_show', { 'id': entity.registro.id }) }}">{{ entity.registro }}</a></td>
+            <td><a href="{{ path('escribano_show', { 'id': entity.escribano.id }) }}">{{ entity.escribano }}</a></td>
+            <td><a href="{{ path('caracter_show', { 'id': entity.caracter.id }) }}">{{ entity.caracter }}</a></td>
+            <td>{% if entity.fechaValidoDesde %}{{ entity.fechaValidoDesde|date('Y-m-d') }}{% endif%}</td>
+            <td>{% if entity.fechaValidoHasta %}{{ entity.fechaValidoHasta|date('Y-m-d') }}{% endif%}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('registro_escribano_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('registro_escribano_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('registro_escribano_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+{%endblock%}

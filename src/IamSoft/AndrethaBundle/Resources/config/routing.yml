@@ -1,0 +1,64 @@
+IamSoftAndrethaBundle_homepage:
+    pattern:  /
+    defaults: { _controller: IamSoftAndrethaBundle:Default:index }
+
+IamSoftAndrethaBundle_escribano:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/escribano.yml"
+    prefix:   /escribano
+
+IamSoftAndrethaBundle_registro:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/registro.yml"
+    prefix:   /registro
+
+IamSoftAndrethaBundle_caracter:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/caracter.yml"
+    prefix:   /caracter
+
+IamSoftAndrethaBundle_registro_escribano:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/registroescribano.yml"
+    prefix:   /registro/escribano
+
+IamSoftAndrethaBundle_libro:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/libro.yml"
+    prefix:   /libro
+
+IamSoftAndrethaBundle_tipo_carpeta:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/tipocarpeta.yml"
+    prefix:   /tipo_carpeta
+
+IamSoftAndrethaBundle_tipo_tramite:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/tipotramite.yml"
+    prefix:   /tipo_tramite
+
+IamSoftAndrethaBundle_tipo_documento_identidad:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/tipodocumentoidentidad.yml"
+    prefix:   /tipo/documento/identidad
+
+IamSoftAndrethaBundle_lote_actas:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/loteactas.yml"
+    prefix:   /lote/actas
+
+IamSoftAndrethaBundle_lote_anexos:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/loteanexos.yml"
+    prefix:   /lote/anexos
+
+IamSoftAndrethaBundle_cliente:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/cliente.yml"
+    prefix:   /cliente
+
+IamSoftAndrethaBundle_personeria_cliente:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/personeriacliente.yml"
+    prefix:   /personeria/cliente
+
+IamSoftAndrethaBundle_carpeta:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/carpeta.yml"
+    prefix:   /carpeta
+
+IamSoftAndrethaBundle_emprendimiento:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/emprendimiento.yml"
+    prefix:   /emprendimiento
+
+IamSoftAndrethaBundle_carpeta_emprendimiento:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/carpetaemprendimiento.yml"
+    prefix:   /carpeta/emprendimiento
+

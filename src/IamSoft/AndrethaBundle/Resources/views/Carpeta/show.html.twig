@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+
+{%block content%}
+
+<h1>Carpeta</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Numeroreferencia</th>
+            <td>{{ entity.numeroReferencia }}</td>
+        </tr>
+        <tr>
+            <th>Denominacion</th>
+            <td>{{ entity.denominacion }}</td>
+        </tr>
+        <tr>
+            <th>Comentarios</th>
+            <td>{{ entity.comentarios }}</td>
+        </tr>
+        <tr>
+            <th>Fechainicio</th>
+            <td>{{ entity.fechaInicio|date('Y-m-d H:i:s') }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('carpeta') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('carpeta_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('carpeta_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+
+{%endblock%}

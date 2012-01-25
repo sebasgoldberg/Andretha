@@ -1,0 +1,30 @@
+caracter:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:Caracter:index" }
+
+caracter_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:Caracter:show" }
+
+caracter_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:Caracter:new" }
+
+caracter_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:Caracter:create" }
+    requirements: { _method: post }
+
+caracter_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:Caracter:edit" }
+
+caracter_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:Caracter:update" }
+    requirements: { _method: post }
+
+caracter_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:Caracter:delete" }
+    requirements: { _method: post }

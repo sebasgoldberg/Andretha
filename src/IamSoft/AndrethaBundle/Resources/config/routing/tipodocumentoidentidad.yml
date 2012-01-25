@@ -1,0 +1,30 @@
+tipodocumentoidentidad:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoDocumentoIdentidad:index" }
+
+tipodocumentoidentidad_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoDocumentoIdentidad:show" }
+
+tipodocumentoidentidad_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoDocumentoIdentidad:new" }
+
+tipodocumentoidentidad_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoDocumentoIdentidad:create" }
+    requirements: { _method: post }
+
+tipodocumentoidentidad_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoDocumentoIdentidad:edit" }
+
+tipodocumentoidentidad_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoDocumentoIdentidad:update" }
+    requirements: { _method: post }
+
+tipodocumentoidentidad_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:TipoDocumentoIdentidad:delete" }
+    requirements: { _method: post }

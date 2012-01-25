@@ -1,0 +1,30 @@
+loteactas:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteActas:index" }
+
+loteactas_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteActas:show" }
+
+loteactas_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteActas:new" }
+
+loteactas_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteActas:create" }
+    requirements: { _method: post }
+
+loteactas_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteActas:edit" }
+
+loteactas_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteActas:update" }
+    requirements: { _method: post }
+
+loteactas_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:LoteActas:delete" }
+    requirements: { _method: post }

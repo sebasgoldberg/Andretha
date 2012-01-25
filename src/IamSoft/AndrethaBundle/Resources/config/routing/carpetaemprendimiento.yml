@@ -1,0 +1,30 @@
+carpetaemprendimiento:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:CarpetaEmprendimiento:index" }
+
+carpetaemprendimiento_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:CarpetaEmprendimiento:show" }
+
+carpetaemprendimiento_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:CarpetaEmprendimiento:new" }
+
+carpetaemprendimiento_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:CarpetaEmprendimiento:create" }
+    requirements: { _method: post }
+
+carpetaemprendimiento_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:CarpetaEmprendimiento:edit" }
+
+carpetaemprendimiento_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:CarpetaEmprendimiento:update" }
+    requirements: { _method: post }
+
+carpetaemprendimiento_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:CarpetaEmprendimiento:delete" }
+    requirements: { _method: post }

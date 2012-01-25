@@ -1,0 +1,30 @@
+emprendimiento:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:Emprendimiento:index" }
+
+emprendimiento_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:Emprendimiento:show" }
+
+emprendimiento_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:Emprendimiento:new" }
+
+emprendimiento_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:Emprendimiento:create" }
+    requirements: { _method: post }
+
+emprendimiento_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:Emprendimiento:edit" }
+
+emprendimiento_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:Emprendimiento:update" }
+    requirements: { _method: post }
+
+emprendimiento_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:Emprendimiento:delete" }
+    requirements: { _method: post }

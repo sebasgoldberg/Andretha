@@ -1,0 +1,81 @@
+IamSoft\AndrethaBundle\Entity\Libro:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: numero
+  properties:
+    numero:
+      - Min: { limit: 1, message: El numero de libro debe ser mayor a cero }
+
+IamSoft\AndrethaBundle\Entity\TipoTramite:
+  properties:
+    denominacion:
+      - NotBlank: ~
+  getters:
+    carpetaOrPadreSeted:
+      - "True": { message: "Debe seleccionar o la carpeta o el tipo de tramite padre" }
+    carpetaAndPadreSeted:
+      - "False": { message: "Debe seleccionar o la carpeta o el tipo de tramite padre, no puede seleccionar ambos" }
+    thisAnAntecestorOfThis:
+      - "False": { message: "El tipo de tramite no puede referenciarse a si mismo como antecesor" }
+
+IamSoft\AndrethaBundle\Entity\RegistroEscribano:
+  properties:
+    registro:
+      - NotNull: ~
+    escribano:
+      - NotNull: ~
+    caracter:
+      - NotNull: ~
+  getters:
+    fechaDesdeMenorIgualFechaHasta:
+      - "True": { message: "La fecha desde debe ser menor o igual que la fecha hasta" }
+# @todo: Redefinir para cada objeto que utillice el periodo especifico de RegistroEscribano
+#    periodoIncluyeTodasLasFechasEnUtilizacionDeThis:
+#      - "True": { message: "El periodo definido no incluye todas las fechas de objetos utilizando este registro-escribano" }
+  constraints:
+    - IamSoft\AndrethaBundle\Validator\EntityManagerConstraint: { method: isNotPeriodoSolapadoConPeriodoYaDefinido, message: "El periodo seleccionado se solapa con otro periodo ya definido para el registro y el escribano seleccionados" }
+
+IamSoft\AndrethaBundle\Entity\TipoDocumentoIdentidad:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: { fields: [denominacion], message: "La denominacion ingresada ya existe" }
+
+IamSoft\AndrethaBundle\Entity\LoteActas:
+  properties:
+    numPreImpresoIni:
+      - Min: { limit: 0, message: El numero pre impreso debe ser mayor o igual a cero }
+    cantidad:
+      - Min: { limit: 1, message: La cantidad debe ser mayor a cero }
+  getters:
+    cantidadUsadosMenorIgualCantidad:
+      - "True": { message: La cantidad de usados debe ser menor o igual a la cantidad ingresada }
+  constraints:
+    - IamSoft\AndrethaBundle\Validator\EntityManagerConstraint: { method: isNotLoteSolapadoConLoteYaDefinido, message: "El rango definido por el numero pre impreso inicial y la cantidad, se solapa con el rango definido para otro lote de actas" }
+    - IamSoft\AndrethaBundle\Validator\EntityManagerConstraint: { method: isNotInUse, message: "El lote de Actas ya se encuentra en uso, imposible editar" }
+
+IamSoft\AndrethaBundle\Entity\LoteAnexos:
+  properties:
+    numPreImpresoIni:
+      - Min: { limit: 0, message: El numero pre impreso debe ser mayor o igual a cero }
+    cantidad:
+      - Min: { limit: 1, message: La cantidad debe ser mayor a cero }
+  getters:
+    cantidadUsadosMenorIgualCantidad:
+      - "True": { message: La cantidad de usados debe ser menor o igual a la cantidad ingresada }
+  constraints:
+    - IamSoft\AndrethaBundle\Validator\EntityManagerConstraint: { method: isNotLoteSolapadoConLoteYaDefinido, message: "El rango definido por el numero pre impreso inicial y la cantidad, se solapa con el rango definido para otro lote de anexos" }
+    - IamSoft\AndrethaBundle\Validator\EntityManagerConstraint: { method: isNotInUse, message: "El lote de anexos ya se encuentra en uso, imposible editar" }
+
+IamSoft\AndrethaBundle\Entity\Cliente:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: { fields: [numeroDocumento, tipoDocumentoIdentidad], message: "Ya existe cliente con el documento ingresado" }
+
+IamSoft\AndrethaBundle\Entity\PersoneriaCliente:
+  constraints:
+#    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: { fields: [cliente, escribano], message: "Ya existe personeria para el cliente y el escribano ingresados" }
+    - IamSoft\AndrethaBundle\Validator\EntityManagerConstraint: { method: isNotPersoneriaClienteYaDefinidaParaEscribano, message: "La personeria ya ha sido definida para el/los escrinano(s) indicado(s)" }
+
+IamSoft\AndrethaBundle\Entity\Carpeta:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: { fields: [tipoCarpeta, numeroReferencia], message: "Ya existe numero de referencia para el tipo de carpeta seleccionado" }
+
+IamSoft\AndrethaBundle\Entity\CarpetaEmprendimiento:
+  - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: { fields: [carpeta, emprendimiento], message: "Ya existe la relacion entre la carpeta y el emprendimiento seleccionados" }

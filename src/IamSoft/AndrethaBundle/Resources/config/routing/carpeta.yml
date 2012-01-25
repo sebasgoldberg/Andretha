@@ -1,0 +1,34 @@
+carpeta:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:Carpeta:index" }
+
+carpeta_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:Carpeta:show" }
+
+carpeta_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:Carpeta:new" }
+
+carpeta_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:Carpeta:create" }
+    requirements: { _method: post }
+
+carpeta_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:Carpeta:edit" }
+
+carpeta_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:Carpeta:update" }
+    requirements: { _method: post }
+
+carpeta_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:Carpeta:delete" }
+    requirements: { _method: post }
+
+carpeta_ajax_get_next_numero_referencia:
+  pattern: /ajax/get/next/numero/referencia/{idTipoCarpeta}
+  defaults: { _controller: "IamSoftAndrethaBundle:Carpeta:getNextNumeroReferencia" }

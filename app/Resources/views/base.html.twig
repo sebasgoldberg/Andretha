@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>{% block title %}A[nd]re[th]a{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        
+        {% block body %}
+          {%block header%} 
+            <h1> A[nd]re[th]a - Manejo de Recursos y Administraci&oacute;n
+              de Procesos Notariales <h1>
+            
+            {%block flash%}
+              {% if app.session.hasFlash('notice') %}
+                <div class="flash-notice">
+                    {{ app.session.flash('notice') }}
+                </div>
+              {% endif %}
+            {%endblock%}
+            
+          {%endblock%}
+          
+          {%block midle%}
+          
+            {%block menu%}
+              {% include '::menu.html.twig' %}
+            {%endblock%}
+            
+            {%block content%} {%endblock%}
+          {%endblock%}
+          
+          {%block footer%} {%endblock%}
+        {% endblock %}
+        
         {% block javascripts %}{% endblock %}
     </body>
 </html>
