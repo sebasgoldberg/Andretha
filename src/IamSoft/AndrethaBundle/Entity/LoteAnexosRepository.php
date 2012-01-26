@@ -3,6 +3,7 @@
 namespace IamSoft\AndrethaBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use IamSoft\AndrethaBundle\lib\Utils;
 
 /**
  * LoteAnexosRepository

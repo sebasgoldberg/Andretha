@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends 'IamSoftAndrethaBundle:Default:base.html.twig' %}
 
 {%block content%}
 
@@ -20,7 +20,7 @@
             <td><a href="{{ path('emprendimiento_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
             <td>{{ entity.denominacion }}</td>
             <td>{{ entity.comentarios }}</td>
-            <td>{% if entity.fechaInicio %}{{ entity.fechaInicio|date('Y-m-d H:i:s') }}{% endif%}</td>
+            <td>{% if entity.fechaInicio %}{{ entity.fechaInicio|date('Y-m-d') }}{% endif%}</td>
             <td>
                 <ul>
                     <li>

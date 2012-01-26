@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends 'IamSoftAndrethaBundle:Default:base.html.twig' %}
 
 {%block content%}
 
@@ -25,6 +25,10 @@
         <tr>
             <th>Cantidadusados</th>
             <td>{{ entity.cantidadUsados }}</td>
+        </tr>
+        <tr>
+            <th>Registro escribano</th>
+            <td>{{ entity.registroEscribano }}</td>
         </tr>
     </tbody>
 </table>

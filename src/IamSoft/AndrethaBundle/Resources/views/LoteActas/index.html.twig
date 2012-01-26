@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends 'IamSoftAndrethaBundle:Default:base.html.twig' %}
 
 {%block content%}
 
@@ -12,6 +12,7 @@
             <th>Cantidad</th>
             <th>Fechacompra</th>
             <th>Cantidadusados</th>
+            <th>Registro escribano</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -21,8 +22,9 @@
             <td><a href="{{ path('loteactas_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
             <td>{{ entity.numPreImpresoIni }}</td>
             <td>{{ entity.cantidad }}</td>
-            <td>{% if entity.fechaCompra %}{{ entity.fechaCompra|date('Y-m-d H:i:s') }}{% endif%}</td>
+            <td>{% if entity.fechaCompra %}{{ entity.fechaCompra|date('Y-m-d') }}{% endif%}</td>
             <td>{{ entity.cantidadUsados }}</td>
+            <td>{{ entity.registroEscribano }}</td>
             <td>
                 <ul>
                     <li>

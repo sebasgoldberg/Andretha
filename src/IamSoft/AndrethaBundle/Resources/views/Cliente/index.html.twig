@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends 'IamSoftAndrethaBundle:Default:base.html.twig' %}
 
 {%block content%}
 
@@ -11,6 +11,7 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Numerodocumento</th>
+            <th>Tipo documento</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -21,6 +22,7 @@
             <td>{{ entity.Nombre }}</td>
             <td>{{ entity.Apellido }}</td>
             <td>{{ entity.numeroDocumento }}</td>
+            <td>{{ entity.tipoDocumentoIdentidad }}</td>
             <td>
                 <ul>
                     <li>

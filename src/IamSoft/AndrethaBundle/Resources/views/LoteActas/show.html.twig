@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends 'IamSoftAndrethaBundle:Default:base.html.twig' %}
 
 {%block content%}
 
@@ -20,11 +20,15 @@
         </tr>
         <tr>
             <th>Fechacompra</th>
-            <td>{{ entity.fechaCompra|date('Y-m-d H:i:s') }}</td>
+            <td>{{ entity.fechaCompra|date('Y-m-d') }}</td>
         </tr>
         <tr>
             <th>Cantidadusados</th>
             <td>{{ entity.cantidadUsados }}</td>
+        </tr>
+        <tr>
+            <th>Registro escribano</th>
+            <td>{{ entity.registroEscribano }}</td>
         </tr>
     </tbody>
 </table>

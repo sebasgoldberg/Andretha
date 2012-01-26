@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends 'IamSoftAndrethaBundle:Default:base.html.twig' %}
 
 {%block content%}
 <h1>Libro list</h1>
@@ -8,6 +8,7 @@
         <tr>
             <th>Id</th>
             <th>Numero</th>
+            <th>Registro escribano</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -16,6 +17,7 @@
         <tr>
             <td><a href="{{ path('libro_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
             <td>{{ entity.numero }}</td>
+            <td>{{ entity.registroEscribano }}</td>
             <td>
                 <ul>
                     <li>

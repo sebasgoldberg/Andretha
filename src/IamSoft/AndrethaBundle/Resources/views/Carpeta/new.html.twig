@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends 'IamSoftAndrethaBundle:Default:base.html.twig' %}
 
 {%block content%}
 
@@ -23,6 +23,10 @@
 
 {% block javascripts %}
   {{ parent() }}
-  <script src="{{ asset('js/jquery-1.7.1.min.js') }}"></script>
-  <script src="{{ asset('bundles/iamsoftandretha/js/carpeta/new.js') }}"></script>
+  <script type="text/javascript"> var urlSetDefaultNumeroReferencia = "{{ path('carpeta_ajax_get_next_numero_referencia') }}"; </script>
+  <script type="text/javascript" src="{{ asset('js/jquery-1.7.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+  <script type="text/javascript" src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/iamsoftandretha/js/carpeta/new.js') }}"></script>
+
 {% endblock %}

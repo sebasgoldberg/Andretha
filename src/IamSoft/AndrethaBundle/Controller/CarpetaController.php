@@ -209,6 +209,9 @@ class CarpetaController extends Controller
     
     public function getNextNumeroReferenciaAction($idTipoCarpeta)
     {
+    		if ($idTipoCarpeta<=0)
+    			return new Response("");
+
         $em = $this->getDoctrine()->getEntityManager();
         
         $repository=$em->getRepository('IamSoftAndrethaBundle:Carpeta');

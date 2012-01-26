@@ -8,33 +8,25 @@
     </head>
     <body>
         
-        {% block body %}
-          {%block header%} 
-            <h1> A[nd]re[th]a - Manejo de Recursos y Administraci&oacute;n
-              de Procesos Notariales <h1>
-            
-            {%block flash%}
-              {% if app.session.hasFlash('notice') %}
-                <div class="flash-notice">
-                    {{ app.session.flash('notice') }}
-                </div>
-              {% endif %}
-            {%endblock%}
-            
-          {%endblock%}
+        {%block header%} 
+        {%endblock%}
           
-          {%block midle%}
+        {%block flash%}
+          {% if app.session.hasFlash('notice') %}
+            <div class="flash-notice">
+                {{ app.session.flash('notice') }}
+            </div>
+          {% endif %}
+        {%endblock%}
           
-            {%block menu%}
-              {% include '::menu.html.twig' %}
-            {%endblock%}
-            
-            {%block content%} {%endblock%}
-          {%endblock%}
-          
-          {%block footer%} {%endblock%}
-        {% endblock %}
+        
+        {%block menu%} {%endblock%}
+        
+        {%block content%} {%endblock%}
+        
+        {%block footer%} {%endblock%}
         
         {% block javascripts %}{% endblock %}
+        
     </body>
 </html>

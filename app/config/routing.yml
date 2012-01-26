@@ -25,3 +25,5 @@ _demo:
     type:     annotation
     prefix:   /demo
 
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

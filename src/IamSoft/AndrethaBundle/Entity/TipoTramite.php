@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * IamSoft\AndrethaBundle\Entity\TipoTramite
  *
  * @ORM\Table()
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="IamSoft\AndrethaBundle\Entity\TipoTramiteRepository")
  */
 class TipoTramite
 {

@@ -10,6 +10,6 @@ class DefaultController extends Controller
     
     public function indexAction()
     {
-        return $this->render('IamSoftAndrethaBundle:Default:index.html.twig');
+        return $this->render('IamSoftAndrethaBundle:Default:base.html.twig');
     }
 }

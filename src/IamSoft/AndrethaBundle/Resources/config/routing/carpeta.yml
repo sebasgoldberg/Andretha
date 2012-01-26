@@ -31,4 +31,6 @@ carpeta_delete:
 
 carpeta_ajax_get_next_numero_referencia:
   pattern: /ajax/get/next/numero/referencia/{idTipoCarpeta}
-  defaults: { _controller: "IamSoftAndrethaBundle:Carpeta:getNextNumeroReferencia" }
+  defaults: { _controller: "IamSoftAndrethaBundle:Carpeta:getNextNumeroReferencia", idTipoCarpeta: 0 }
+  requirements:
+    page: \d+
