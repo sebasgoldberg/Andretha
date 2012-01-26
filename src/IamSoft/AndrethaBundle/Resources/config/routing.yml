@@ -62,3 +62,11 @@ IamSoftAndrethaBundle_carpeta_emprendimiento:
     resource: "@IamSoftAndrethaBundle/Resources/config/routing/carpetaemprendimiento.yml"
     prefix:   /carpeta/emprendimiento
 
+IamSoftAndrethaBundle_document:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/document.yml"
+    prefix:   /document
+
+IamSoftAndrethaBundle_documento_tipo_tramite:
+    resource: "@IamSoftAndrethaBundle/Resources/config/routing/documentotipotramite.yml"
+    prefix:   /documento/tipo/tramite
+

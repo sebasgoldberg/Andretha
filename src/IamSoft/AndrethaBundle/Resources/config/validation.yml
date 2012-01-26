@@ -79,3 +79,8 @@ IamSoft\AndrethaBundle\Entity\Carpeta:
 
 IamSoft\AndrethaBundle\Entity\CarpetaEmprendimiento:
   - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: { fields: [carpeta, emprendimiento], message: "Ya existe la relacion entre la carpeta y el emprendimiento seleccionados" }
+
+IamSoft\AndrethaBundle\Entity\Document:
+  properties:
+    file:
+      - File: { maxSize: 6000000 }

@@ -80,10 +80,12 @@ class RegistroEscribano
     
     public function __toString()
     {
-    	return 'Reg:'.$this->getRegistro().'-'.
-    		'Esc:'.$this->getEscribano().'-'.
-    		'Car:'.$this->getCaracter().'-';
-    		'Val:'.$this->getFechaValidoDesde().' a '.$this->getFechaValidoHasta();
+    	return 'Reg:'.$this->getRegistro().'//'.
+    		'Esc: '.$this->getEscribano().'//'.
+    		'Car: '.$this->getCaracter().'//'.
+    		'Val: '.
+    			$this->getFechaValidoDesde()->format("Y-m-d").
+    			' a '.$this->getFechaValidoHasta()->format("Y-m-d");
     }    
     
     

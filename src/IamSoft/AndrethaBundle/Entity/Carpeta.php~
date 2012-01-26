@@ -52,7 +52,7 @@ class Carpeta
     private $fechaInicio;
 
 		/**
-     * @ORM\OneToMany(targetEntity="CarpetaEmprendimiento", mappedBy="carpetas")
+     * @ORM\OneToMany(targetEntity="CarpetaEmprendimiento", mappedBy="carpeta")
      */
     private $carpetaEmprendimientos;
     
@@ -180,5 +180,25 @@ class Carpeta
     public function getCarpetaEmprendimientos()
     {
         return $this->carpetaEmprendimientos;
+    }
+
+    /**
+     * Set tipoCarpeta
+     *
+     * @param IamSoft\AndrethaBundle\Entity\TipoCarpeta $tipoCarpeta
+     */
+    public function setTipoCarpeta(\IamSoft\AndrethaBundle\Entity\TipoCarpeta $tipoCarpeta)
+    {
+        $this->tipoCarpeta = $tipoCarpeta;
+    }
+
+    /**
+     * Get tipoCarpeta
+     *
+     * @return IamSoft\AndrethaBundle\Entity\TipoCarpeta 
+     */
+    public function getTipoCarpeta()
+    {
+        return $this->tipoCarpeta;
     }
 }

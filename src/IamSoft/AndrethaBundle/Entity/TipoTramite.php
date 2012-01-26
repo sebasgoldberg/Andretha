@@ -46,9 +46,15 @@ class TipoTramite
      */
     protected $tiposTramiteHijo;
 
+		/**
+     * @ORM\OneToMany(targetEntity="DocumentoTipoTramite", mappedBy="tipoTramite")
+     */
+    private $documentosTipoTramite;
+    
     public function __construct()
     {
         $this->tiposTramiteHijo = new ArrayCollection();
+        $this->documentosTipoTramite = new ArrayCollection();
     }
     
     public function __toString()
@@ -217,4 +223,24 @@ class TipoTramite
     }
     
     
+
+    /**
+     * Add documentosTipoTramite
+     *
+     * @param IamSoft\AndrethaBundle\Entity\DocumentoTipoTramite $documentosTipoTramite
+     */
+    public function addDocumentoTipoTramite(\IamSoft\AndrethaBundle\Entity\DocumentoTipoTramite $documentosTipoTramite)
+    {
+        $this->documentosTipoTramite[] = $documentosTipoTramite;
+    }
+
+    /**
+     * Get documentosTipoTramite
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getDocumentosTipoTramite()
+    {
+        return $this->documentosTipoTramite;
+    }
 }

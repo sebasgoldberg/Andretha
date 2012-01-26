@@ -126,4 +126,24 @@ class TipoCarpeta
     {
         return $this->tiposTramite;
     }
+
+    /**
+     * Add carpetas
+     *
+     * @param IamSoft\AndrethaBundle\Entity\Carpeta $carpetas
+     */
+    public function addCarpeta(\IamSoft\AndrethaBundle\Entity\Carpeta $carpetas)
+    {
+        $this->carpetas[] = $carpetas;
+    }
+
+    /**
+     * Get carpetas
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCarpetas()
+    {
+        return $this->carpetas;
+    }
 }

@@ -1,0 +1,30 @@
+document:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:Document:index" }
+
+document_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:Document:show" }
+
+document_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:Document:new" }
+
+document_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:Document:create" }
+    requirements: { _method: post }
+
+document_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:Document:edit" }
+
+document_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:Document:update" }
+    requirements: { _method: post }
+
+document_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:Document:delete" }
+    requirements: { _method: post }

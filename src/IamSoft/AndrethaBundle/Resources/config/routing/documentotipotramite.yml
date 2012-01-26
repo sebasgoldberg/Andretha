@@ -1,0 +1,30 @@
+documentotipotramite:
+    pattern:  /
+    defaults: { _controller: "IamSoftAndrethaBundle:DocumentoTipoTramite:index" }
+
+documentotipotramite_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IamSoftAndrethaBundle:DocumentoTipoTramite:show" }
+
+documentotipotramite_new:
+    pattern:  /new
+    defaults: { _controller: "IamSoftAndrethaBundle:DocumentoTipoTramite:new" }
+
+documentotipotramite_create:
+    pattern:  /create
+    defaults: { _controller: "IamSoftAndrethaBundle:DocumentoTipoTramite:create" }
+    requirements: { _method: post }
+
+documentotipotramite_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IamSoftAndrethaBundle:DocumentoTipoTramite:edit" }
+
+documentotipotramite_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IamSoftAndrethaBundle:DocumentoTipoTramite:update" }
+    requirements: { _method: post }
+
+documentotipotramite_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IamSoftAndrethaBundle:DocumentoTipoTramite:delete" }
+    requirements: { _method: post }

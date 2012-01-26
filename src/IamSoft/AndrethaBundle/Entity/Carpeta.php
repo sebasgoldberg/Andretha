@@ -52,7 +52,7 @@ class Carpeta
     private $fechaInicio;
 
 		/**
-     * @ORM\OneToMany(targetEntity="CarpetaEmprendimiento", mappedBy="carpetas")
+     * @ORM\OneToMany(targetEntity="CarpetaEmprendimiento", mappedBy="carpeta")
      */
     private $carpetaEmprendimientos;
     
